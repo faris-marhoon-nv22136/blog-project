@@ -141,7 +141,7 @@ const Footer = () => {
 
             <li>
               <a href="/">
-                <FaInstagram className="w-6 h-auto" />
+                <FaTelegram className="w-6 h-auto" />
               </a>
             </li>
           </ul>
