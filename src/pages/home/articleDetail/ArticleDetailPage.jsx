@@ -4,6 +4,7 @@ import MainLayout from "../../../Components/MainLayout";
 import BreadCrumbs from "../../../Components/BreadCrumbs";
 import { images } from "../../../constants";
 import SuggestedPosts from "./container/SuggestedPosts";
+import CommentContainer from "../../../Components/comments/CommentContainer";
 
 const breadCrumbsData = [
   { name: "Home", link: "/" },
@@ -73,6 +74,7 @@ const ArticleDetailPage = () => {
               lectus proin.
             </p>
           </div>
+          <CommentContainer className="mt-10" logginedUserId="a" />
         </article>
         <SuggestedPosts
           header="Lastest Article"
