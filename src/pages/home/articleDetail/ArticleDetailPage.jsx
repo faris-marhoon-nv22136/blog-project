@@ -5,6 +5,7 @@ import BreadCrumbs from "../../../Components/BreadCrumbs";
 import { images } from "../../../constants";
 import SuggestedPosts from "./container/SuggestedPosts";
 import CommentContainer from "../../../Components/comments/CommentContainer";
+import SocialShareButtons from "../../../Components/SocialShareButtons";
 
 const breadCrumbsData = [
   { name: "Home", link: "/" },
@@ -76,12 +77,27 @@ const ArticleDetailPage = () => {
           </div>
           <CommentContainer className="mt-10" logginedUserId="a" />
         </article>
-        <SuggestedPosts
-          header="Lastest Article"
-          posts={postsData}
-          tags={tagsData}
-          className="mt-8 lg:mt-0 lg:max-w-xs"
-        />
+        <div>
+          <SuggestedPosts
+            header="Lastest Article"
+            posts={postsData}
+            tags={tagsData}
+            className="mt-8 lg:mt-0 lg:max-w-xs"
+          />
+          <div className="mt-7">
+            <h2 className="font-roboto font-medium text-dark-hard mb-4 md:text-xl">
+              Share on:
+            </h2>
+            <SocialShareButtons
+              url={encodeURI(
+                "https://www.websitepulse.com/blog/server-side-vs-client-side-rendering-complete-guide"
+              )}
+              title={encodeURIComponent(
+                "Everything You Should Know About Server-Side Vs. Client-Side Rendering"
+              )}
+            />
+          </div>
+        </div>
       </section>
     </MainLayout>
   );
